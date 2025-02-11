@@ -1,23 +1,18 @@
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage{tikz}
+\usepackage{graphicx, xcolor, tikz, calligra}
+
+% Tema
+\usetheme{Madrid}
 
 % Configurar colores y fuentes
-\hypersetup{colorlinks,linkcolor=.}
-\setbeamercolor{frametitle}{fg=orange}
-\setbeamercolor{block title}{fg=blue}
-\setbeamercolor{section title}{fg=orange}
-\setbeamercolor{subsection title}{fg=orange}
-\setbeamercolor{section in toc}{fg=black}
-\setbeamercolor{subsection in toc}{fg=orange}
+\useoutertheme{shadow}
+\useinnertheme{rounded}
 \setbeamertemplate{navigation symbols}{}
-\setbeamercolor{itemize item}{fg=black}
-\setbeamercolor{enumerate item}{fg=black}
-\setbeamercolor{itemize subitem}{fg=black}
-\setbeamercolor{enumerate subitem}{fg=black}
-\setbeamercolor{item projected}{fg=black, bg=black}
-\setbeamercolor{title}{fg=black}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{caption}[numbered]
+\definecolor{main-color}{RGB}{255,128,0} 
+\usecolortheme[named=main-color]{structure}
+\hypersetup{colorlinks,linkcolor=.} 
 
 % Código fuente
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -44,6 +39,7 @@
   literate={ñ}{{\~n}}1 {á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1,
 }
 
+% Para la asignatura IPM
 \lstdefinelanguage{opl}
 {
   morekeywords={dvar, float+, maximize, minimize, subject to},
@@ -52,6 +48,7 @@
   morecomment=[l]//,
 }
 
+% Para la asignatura IPM
 \lstdefinelanguage{oml}
 {
   morekeywords={Decisions, Reals, Infinity, Goals, Maximize, Constraints},
@@ -60,70 +57,7 @@
   morecomment=[l]//,
 }
 
-% Configurar el formato del título del frame
-\setbeamertemplate{frametitle}
-{
-  \leavevmode%
-  \vspace{0.25em}
-  \hbox{%
-    % Configuración del título de la sección a la izquierda en la primera mitad
-    \makebox[0.35\paperwidth][l]{%
-      \usebeamerfont{section title}\insertsectionhead
-    }%
-    % Configuración del título de la subsección a la izquierda en la segunda mitad
-    \makebox[0.65\paperwidth][l]{%
-      \usebeamerfont{subsection title}\insertsubsectionhead
-    }%
-  }
-}
-
-% Configurar la plantilla del pie de página
-%\makeatletter
-\setbeamertemplate{footline}
-{
-  \leavevmode%
-  \hbox{%
-  % Comprobar si es la primera diapositiva
-    \begin{beamercolorbox}[wd=0.13\paperwidth,ht=2.25ex,dp=1ex,left]{author in head/foot}%
-      \includegraphics[height=0.75cm]{core/logo-ucm.png} % Ajusta el tamaño del logo según sea necesario
-    \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=0.80\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-      \vbox{
-        \hbox to \hsize{%
-          \color{orange}\rule[1mm]{0.95\hsize}{0.5mm} % línea superior más gruesa
-          \hfill
-          \color{black}\insertframenumber{} % número de página
-          \vspace{-2mm} % ajuste vertical
-        }
-        \hbox to \hsize{%
-          \color{orange}\rule[0.5mm]{0.95\hsize}{0.25mm} % línea inferior más delgada
-      
-        }
-        \hbox to \hsize{%
-          \hfil \insertauthor \hfil
-        }
-        \vspace{1mm} % ajuste vertical
-        \hbox to \hsize{%
-          \hfil \insertshortinstitute \hfil
-        }
-      }
-    \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.07\paperwidth,ht=2.25ex,dp=1ex,right]{author in head/foot}%
-      \includegraphics[height=0.75cm]{core/logo-uned.png} % Ajusta el tamaño del logo según sea necesario
-    \end{beamercolorbox}%
-  }%
-  \vskip0pt%
-}
-%\makeatother
-
-% Dibujar un cuadrado transparente con borde azul en el fondo de la diapositiva
-\usebackgroundtemplate{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \draw[blue, line width=1pt, rounded corners=5pt] % Cambia el grosor y las esquinas redondeadas según sea necesario
-      ([xshift=15pt,yshift=24pt]current page.south west) rectangle
-      ([xshift=-15pt,yshift=-30pt]current page.north east); % Ocupa todo el cuerpo de la diapositiva menos la cabecera y el pie de página
-  \end{tikzpicture}%
-}
+\institute[UCM-UNED]{Máster Universitario en Ingeniería de Sistemas y Control\\[.5 cm]\includegraphics[scale=0.2]{core/logo-misc.png} \\ [0.0 cm]}
 
 % Índice al inicio de cada subsección
 \AtBeginSubsection[]{

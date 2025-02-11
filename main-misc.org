@@ -5,13 +5,14 @@
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [8pt, t]
 #+LaTeX_CLASS_OPTIONS_STUDENT: [8pt, t, handout]
-#+LaTeX_CLASS_OPTIONS_16x9: [t, aspectratio=169, 8pt]
+#+LaTeX_CLASS_OPTIONS_16x9: [8pt, t, aspectratio=169]
 #+LATEX_HEADER: \usepackage{jlrisco-misc}
 
+
 #+TITLE: Título del tema
-#+AUTHOR: José L. Risco Martín
+#+SUBTITLE: Parte del tema
+#+AUTHOR: Nombre de la asignatura
 #+DATE: Curso 24/25
-#+BEAMER_HEADER: \institute[Título de la asignatura - Máster Universitario en Ingeniería de Sistemas y Control]{}
 
 * Sección 1
 
