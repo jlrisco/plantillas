@@ -20,7 +20,7 @@
 
 *** Diapositiva 1
 
-Este es el texto de la diapositiva 1. Podemos tener listas:
+Este es el *texto de la diapositiva 1*. Podemos tener listas:
 - Este es el ítem 1.
 - Este es el ítem 2.
 
