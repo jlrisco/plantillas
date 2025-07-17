@@ -1,1 +1,7 @@
-*.tex
+*.acn
+*.acr
+*.alg
+*.glg
+*.gls
+*.ist
+*.lol
