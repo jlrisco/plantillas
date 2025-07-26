@@ -93,7 +93,7 @@
 \cleardoublepage
 \thispagestyle{empty}
 
-\centering
+\begin{center}
 \vspace*{1cm}
 
 {\Huge {Título en español}} \\
@@ -125,46 +125,75 @@
 {\large \textbf{Facultad de Informática}}\\
 {\large \textbf{Universidad Complutense de Madrid} \par}
 {\large \textbf{21 de julio de 2025}}
+\end{center}
 
+\cleardoublepage
+\thispagestyle{empty}
+\chapter*{Autorización de difusión}
+El abajo firmante, matriculado en el Máster en Ingeniería en Informática de la Facultad de Informática, autoriza a la Universidad Complutense de Madrid (UCM) a difundir y utilizar con fines académicos, no comerciales y mencionando expresamente a su autor el presente Trabajo Fin de Máster: ``Integración de modelos simulados y reales para la detección de cianobacterias nocivas en entornos acuáticos'', realizado durante el curso académico 2024-2025 bajo la dirección de José Luis Risco Martín y Segundo Esteban San Román en el Departamento de Arquitectura de Computadores y Automática, y a la Biblioteca de la UCM a depositarlo en el Archivo Institucional E-Prints Complutense con el objeto de incrementar la difusión, uso e impacto del trabajo en Internet y garantizar su preservación y acceso a largo plazo.
 
+\vspace{5cm}
 
+\begin{center}
+\large Roberto Domínguez Fernández\\
 
+\vspace{0.5cm}
 
+\today
+\end{center}
 
+\cleardoublepage
+\chapter*{Dedicatoria}
 
+\begin{flushright}
+\begin{minipage}[c]{8.5cm}
+\flushright{\textit{A mis padres por haber creído en mí desde el comienzo de mi etapa universitaria}}
+\end{minipage}
+\end{flushright}
 
+\cleardoublepage
+\chapter*{Agradecimientos}
+Quiero agradecer el presente trabajo a la Universidad Complutense de Madrid y a los profesores y compañeros con los que he tenido la suerte de coincidir durante esta etapa de máster universitario. La ayuda que he recibido de todos ellos ha sido fundamental.
 
+Quiero agradecer también al Departamento de Arquitectura de Computadores y Automática de esta Universidad por haber confiado en mí como investigador en este proyecto, y a todos los investigadores y profesores con los que he podido compartir tiempo de trabajo. Especialmente, quiero agradecer a todos los colaboradores e investigadores que han tenido, directa o indirectamente, participación en los dos proyectos que han permitido la consecución de este trabajo. 
 
+Particularmente, quiero agradecer a los profesores José Luis Risco Martín y Segundo Esteban San Román su ayuda individual y su dedicación en el proyecto. Su tiempo, su entrega y sus aportaciones han sido claves en los resultados obtenidos.
 
+A continuación, quiero agradecer la colaboración de los investigadores Giordy Alexander Andrade Aimara y Óscar Fernández Sebastián. Su participación ha sido necesaria en este proyecto. Queda demostrado que el trabajo en equipo es siempre más fructuoso que el trabajo individual.
 
+Por último, quiero agradecer el apoyo de mi familia durante los cuatro años de grado y los dos años de máster. José, Paula María, Sergio, Almudena, abuelos... Gracias por todo desde siempre.
 
-
-
-
-
-
-
-
-
-
-
-
-
-\clearpage
-
+\cleardoublepage
 \chapter*{Resumen}
-\addcontentsline{toc}{chapter}{Resumen}
-En el contexto del sistema energético actual y la creciente penetración de fuentes renovables en la red eléctrica, la gestión eficiente se presenta como un reto para garantizar su estabilidad. Este \gls{tfm} propone una herramienta de simulación y optimización del consumo energético en hogares conectados que responde a tarifas eléctricas dinámicas. El objetivo principal es contribuir a una mayor flexibilidad en el consumo tanto residencial como no residencial, reduciendo así los picos de demanda mediante decisiones de carga informadas y automatizadas.
+\section*{Título en español}
+La fotosíntesis oxigénica llevada a cabo por las cianobacterias ha sido y es imprescindible para la vida aeróbica, aunque un crecimiento rápido y descontrolado de estos microorganismos puede ser perjudicial en entornos acuáticos. Estos microorganismos son especialmente nocivos para la flora y fauna de los entornos de agua dulce y para los seres vivos que requieren de este medio para su subsistencia. Es por tanto un problema muy grave que debe ser tratado de manera rápida y eficiente para preservar estos ecosistemas.
 
-Se emplea el formalismo \gls{devs}, para modelar y simular el comportamiento de distintos dispositivos eléctricos. La \mbox{simulación} se complementa con un algoritmo metaheurístico de \gls{sa}, que permite optimizar los planes de carga en función de los precios de la electricidad y las restricciones definidas por el usuario.
+Las técnicas actuales no resuelven eficientemente esta problemática. Esto es debido a que se enfocan en proporcionar una solución en el momento exacto en el que se detectan los primeros indicios de estos crecimientos denominados afloraciones. Detectar estos indicios supone que los efectos nocivos derivados ya están surgiendo, por lo que estas técnicas únicamente se centran en una mitigación tras detección. Implementar nuevas técnicas preventivas que permitan predecir en tiempo y posición estas afloraciones conseguiría alertar a las autoridades, con el objetivo de que puedan tomar medidas antes de que los efectos nocivos derivados sean una realidad.
 
-La herramienta desarrollada en Python, incluye una interfaz gráfica intuitiva que permite a los usuarios introducir sus preferencias y visualizar los resultados del proceso de optimización. El diseño modular de la arquitectura permite su escalabilidad y adaptación a diferentes escenarios, y se ha validado mediante un conjunto de pruebas de convergencia.
+La solución planteada en el proyectos IA-GES-BLOOM-CM permite simular durante un período de tiempo el desplazamiento de un vehículo autónomo acuático en busca de predicciones de afloraciones de cianobacterias mediante el uso de datos sintéticos. En este trabajo, englobado dentro del proyecto SMART-BLOOMS, se pretende validar esta solución por medio de su adaptación y posterior despliegue sobre unidades reales en un entorno acuático real. De esta manera se podrá emular el comportamiento del vehículo físico y comprobar si funciona acorde a la simulación original. Para llevar a cabo este despliegue es necesario incluir e integrar sensores reales que permitan obtener datos de posicionamiento y orientación del entorno para emular correctamente el comportamiento del vehículo. Debido a que en este trabajo se busca validar el funcionamiento del vehículo, los sensores que no sean estrictamente necesarios para la orientación y el movimiento del vehículo podrán seguir siendo sintéticos.
 
-Los resultados demuestran que es posible desplazar parte del consumo eléctrico hacia franjas horarias con menor coste, sin comprometer las preferencias del usuario ni requerir su intervención directa. Esto evidencia el potencial de los \gls{hems}, como instrumentos clave para la flexibilización de la demanda. A pesar de algunas limitaciones identificadas, como la simplificación del modelo de tarifas o la falta de conexión con datos en tiempo real, el sistema propuesto sienta las bases para futuros desarrollos que podrían integrar más dispositivos, múltiples hogares e incluso comunidades energéticas enteras. En conjunto, esta propuesta representa un paso significativo hacia hogares más inteligentes, y activos dentro del nuevo ecosistema energético.
+\section*{Palabras clave}   
+\noindent Eventos Discretos, Modelado y Simulación, Vehículos Autónomos, Inferencia, Afloraciones de Cianobacterias, Sistemas de Alerta Temprana, Sensores Reales y Simulados, Gemelos Digitales, Computación en el Borde.
 
-\vspace{1cm}
 
-\noindent\textbf{Palabras clave: }\textit{HEMS, IoT, DEVS, Flexibilidad eléctrica, Gestión de la demanda, Recocido simulado}
+\cleardoublepage   
+\chapter*{Abstract}
+\section*{Title in English}
+Oxygenic photosynthesis carried out by cyanobacteria has been and is essential for aerobic life, although rapid and uncontrolled growth of these microorganisms can be harmful in aquatic environments. These microorganisms are particularly detrimental to the flora and fauna of freshwater aquatic environments and to living beings that depend on this medium for their survival. Therefore, it is a very serious problem that must be addressed quickly and efficiently to preserve these environments. 
+
+Current techniques do not efficiently solve this problem. This is because they focus on providing a solution at the exact moment the first signs of these growths, known as blooms, are detected. Detecting these signs implies that the harmful effects are already emerging, leaving these operational techniques relegated to mitigation after detection. Implementing new preventive techniques that allow for the prediction in time and location of these blooms would alert authorities, so they can take measures before the harmful effects become a reality. 
+
+The solution proposed in the IA-GES-BLOOM-CM project allows simulating for a period of time the movement of an autonomous aquatic vehicle in search of predictions of cyanobacteria blooms using synthetic data. In this work, which is part of the SMART-BLOOMS project, the goal is to validate this solution through its adaptation and subsequent deployment on real units in a real aquatic environment. This way, the behavior of the physical vehicle can be emulated and it can be confirmed that it works according to the original simulation. To carry out this deployment, it is necessary to include real sensors that allow obtaining data on positioning and orientation of the environment to correctly emulate the behavior of the vehicle. Since this work aims to validate the functioning of the vehicle, sensors that are not strictly necessary for the orientation and movement of the vehicle may continue to be synthetic. This requires a correct integration of synthetic and real data.
+
+\section*{Keywords}
+\noindent Discrete Events, Modeling and Simulation, Autonomous Vehicles, Inference, Cyanobacteria Blooms, Early Warning Systems, Real and Simulated Sensors, Digital Twins, Edge Computing.
+
+
+
+
+
+
+
 
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
