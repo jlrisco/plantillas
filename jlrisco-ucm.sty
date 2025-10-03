@@ -1,0 +1,82 @@
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx, xcolor, tikz}
+% Para bloques #+RESULTS: de org-beamer:
+\renewcommand{\verbatim@font}{\footnotesize}
+
+% Tema
+\usetheme{Madrid}
+
+% Configurar colores y fuentes
+\useoutertheme{shadow}
+\useinnertheme{rounded}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{caption}[numbered]
+\definecolor{main-color}{RGB}{153,0,51} 
+\usecolortheme[named=main-color]{structure}
+\hypersetup{colorlinks,linkcolor=.}
+
+% Código fuente
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  showstringspaces=false,
+  keywordstyle=\color{blue}\ttfamily,          % keyword style
+  commentstyle=\color{dkgreen}\ttfamily,       % comment style
+  stringstyle=\color{mauve}\ttfamily,         % string literal style
+  numbersep=5pt,                          		% How far are line-numbers from code
+  frame=none,                             		% A frame around the code
+  tabsize=2,                              		% Default tab size
+  captionpos=b,                           		% Caption-position = bottom
+  breaklines=true,                        		% Automatic line breaking?
+  showspaces=false,                       		% Dont make spaces visible
+  keepspaces=true,
+  showtabs=false,                         		% Dont make tabls visible
+  columns=fullflexible,                    		% Column format
+  morekeywords={__global__, __device__},  		% Specific keywords
+  inputencoding=utf8x,
+  extendedchars=true,
+  literate={ñ}{{\~n}}1 {á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1,
+}
+
+\lstdefinelanguage{asm}
+{
+  morekeywords={and, b, blo, blx, bne, cmp, ldr, mov, mrc, stmia, wfe},
+  morekeywords=[2]{.section, .global},
+  sensitive=false,
+  alsoletter={.,0,1,2,3,4,5,6,7,8,9},
+  alsodigit={?},
+  sensitive=false,
+  morestring=[b]",
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]@,
+  morecomment=[l]//,
+}
+
+\lstdefinelanguage{ld-script}
+{
+  morekeywords={ENTRY, SECTIONS, KEEP},
+  morekeywords=[2]{., ALIGN},
+  sensitive=false,
+  alsoletter={.,0,1,2,3,4,5,6,7,8,9},
+  alsodigit={?},
+  sensitive=true,
+  morestring=[b]",
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]@,
+  morecomment=[l]//,
+}
+
+% Fondo del cisne
+\usebackgroundtemplate{
+  \tikz\node[opacity=0.025, rotate = 23] {\includegraphics[height=1.1\paperheight,width=1.1\paperwidth]{core/ucm.jpg}};}
+
+% Índice al inicio de cada subsección
+\AtBeginSubsection[]{
+  \begin{frame}{Índice}
+    \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded,subsubsectionstyle=show/shaded/hide]
+  \end{frame}
+}
