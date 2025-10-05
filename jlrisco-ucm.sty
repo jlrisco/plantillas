@@ -74,9 +74,9 @@
 \usebackgroundtemplate{
   \tikz\node[opacity=0.025, rotate = 23] {\includegraphics[height=1.1\paperheight,width=1.1\paperwidth]{core/ucm.jpg}};}
 
-% Índice al inicio de cada subsección
-\AtBeginSubsection[]{
-  \begin{frame}{Índice}
-    \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded,subsubsectionstyle=show/shaded/hide]
+% Índice al inicio de cada sección
+\AtBeginSection[]{
+  \begin{frame}
+    \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
   \end{frame}
 }

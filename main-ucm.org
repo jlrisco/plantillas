@@ -1,5 +1,5 @@
 #+STARTUP: beamer
-#+OPTIONS: H:3
+#+OPTIONS: H:2
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 #+LaTeX_CLASS: beamer
@@ -13,23 +13,22 @@
 #+SUBTITLE: Parte del tema
 #+AUTHOR: Nombre de la asignatura
 #+DATE: Curso 25/26
+#+BEAMER_HEADER: \institute[UCM]{Dpto. de Arquitectura de Computadores y Automática\\[.5 cm]\includegraphics[scale=0.1]{core/logo-ucm-rojo.png} \\ [0.0 cm]}
 
 * Sección 1
 
-** Subsección 1.1
-
-*** Diapositiva 1
+** Diapositiva 1
 
 Este es el *texto de la diapositiva 1*. Podemos tener listas:
 - Este es el ítem 1.
 - Este es el ítem 2.
 
-*** Diapositiva 1
+** Diapositiva 2
 
-**** Cuadro de texto normal
+*** Cuadro de texto normal
 Esto es un cuadro de texto normal.
 
-**** Cuadro de texto de ejemplo                           :B_exampleblock:
+*** Cuadro de texto de ejemplo                           :B_exampleblock:
 :PROPERTIES:
 :BEAMER_env: exampleblock
 :END:
@@ -39,13 +38,9 @@ Esto es un cuadro de texto de ejemplo.
 
 ** Autores
 
-*** Autores
-
 - Risco Martín, José Luis
 
 ** Licencia
-
-*** Licencia
 
 Este trabajo se publica bajo una licencia [[https://creativecommons.org/licenses/by-sa/4.0/][CC BY-SA 4.0]]. Usted es libre de:
 
