@@ -1,0 +1,69 @@
+% jlrisco-tfx.sty
+% Paquete de estilo para Trabajos de Fin de Grado y Máster
+\ProvidesPackage{jlrisco-tfx}[28/07/2025 Estilo personalizado para TFGs/TFMs]
+
+% --- IDENTIFICACIÓN DE PAQUETES NECESARIOS ---
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[spanish]{babel}
+\RequirePackage{graphicx}
+\RequirePackage{geometry}
+\RequirePackage{emptypage}
+\RequirePackage{float}
+\RequirePackage{longtable}
+\RequirePackage{caption} 
+\RequirePackage{booktabs}
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\RequirePackage[colorlinks=true, allcolors=blue]{hyperref}
+\RequirePackage{array}
+\RequirePackage{xstring}
+\RequirePackage[automake, acronym, toc]{glossaries}
+\RequirePackage{lipsum}
+\RequirePackage{parskip}
+
+% --- CONFIGURACIONES GENERALES ---
+
+% Traducciones para 'babel' en español
+\addto\captionsspanish{
+    \renewcommand{\listtablename}{Índice de tablas}
+    \renewcommand{\tablename}{Tabla}
+    \renewcommand{\lstlistlistingname}{Índice de listados de código}
+    \renewcommand{\lstlistingname}{Listado}
+}
+
+% Geometría de la página
+\geometry{a4paper, margin=2.5cm} 
+
+% Configuración de glosarios
+\glsdisablehyper
+
+% --- CONFIGURACIÓN DE LISTINGS PARA EL CÓDIGO FUENTE ---
+
+% Definición de colores
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Opciones globales para 'listings'
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{gray!10},
+  showstringspaces=false,
+  keywordstyle=\color{blue}\ttfamily,
+  commentstyle=\color{dkgreen}\ttfamily,
+  stringstyle=\color{mauve}\ttfamily,
+  numbersep=5pt,
+  frame=none,
+  tabsize=2,
+  captionpos=b,
+  breaklines=true,
+  showspaces=false,
+  keepspaces=true,
+  showtabs=false,
+  columns=fullflexible,
+  inputencoding=utf8,
+  extendedchars=true,
+  literate={ñ}{{\~n}}1 {á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {¡}{¡}1,
+}
+
+\endinput
