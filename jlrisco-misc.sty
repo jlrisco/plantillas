@@ -1,3 +1,5 @@
+\usepackage[T1]{fontenc}  % Importante para codificación de salida correcta
+\usepackage{lmodern}      % Fuentes vectoriales nítidas (Latin Modern)
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx, xcolor, tikz}
 % Para bloques #+RESULTS: de org-beamer:
@@ -12,6 +14,7 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{headline}{}
 \setbeamertemplate{caption}[numbered]
+%\setbeamerfont{frametitle}{series=\bfseries} % Título de diapositivas en negrita
 \definecolor{main-color}{RGB}{255,128,0} 
 \usecolortheme[named=main-color]{structure}
 \hypersetup{colorlinks,linkcolor=.} 
@@ -38,7 +41,7 @@
   columns=fullflexible,                    		% Column format
   inputencoding=utf8x,
   extendedchars=true,
-  literate={ñ}{{\~n}}1 {á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1,
+  literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ñ}{{\~n}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1
 }
 
 % Para la asignatura IPM
