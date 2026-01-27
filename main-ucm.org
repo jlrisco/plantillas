@@ -3,11 +3,10 @@
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 #+LaTeX_CLASS: beamer
-#+LaTeX_CLASS_OPTIONS: [8pt, t]
-#+LaTeX_CLASS_OPTIONS_STUDENT: [8pt, t, handout]
-#+LaTeX_CLASS_OPTIONS_16x9: [8pt, t, aspectratio=169]
+#+LaTeX_CLASS_OPTIONS: [t, smaller]
+#+LaTeX_CLASS_OPTIONS_STUDENT: [t, smaller, handout]
+#+LaTeX_CLASS_OPTIONS_16x9: [t, smaller, aspectratio=169]
 #+LATEX_HEADER: \usepackage{jlrisco-ucm}
-
 
 #+TITLE: Título del tema
 #+SUBTITLE: Parte del tema
