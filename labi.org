@@ -20,6 +20,7 @@
 #+LaTeX_HEADER: \subsectionfont{\color{subsectioncolor}}
 #+LaTeX_HEADER: \subsubsectionfont{\color{subsubsectioncolor}}
 #+LATEX_HEADER: \lstset{basicstyle=\ttfamily\footnotesize, showstringspaces=false, keywordstyle=\color{blue}\ttfamily, commentstyle=\color{dkgreen}\ttfamily, stringstyle=\color{mauve}\ttfamily, numbersep=5pt, frame=none, tabsize=2, captionpos=b, breaklines=true, showspaces=false, keepspaces=true, showtabs=false, columns=fullflexible, extendedchars=true, literate={ñ}{{\~n}}1 {á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1,}
+#+LATEX_HEADER: \lstdefinelanguage{text}{}
 
 #+LATEX_HEADER: \setlength{\droptitle}{-2cm} 
 #+LATEX_HEADER: \pretitle{\begin{center}\LARGE\bfseries\color{sectioncolor}}
