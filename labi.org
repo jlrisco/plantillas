@@ -1,4 +1,3 @@
-#+LANGUAGE: es
 #+OPTIONS: toc:nil
 
 #+LATEX_CLASS: article
