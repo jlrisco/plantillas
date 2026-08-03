@@ -1,0 +1,53 @@
+---
+title: "Título Principal del Documento"
+subtitle: "Subtítulo del Documento"
+author: "Nombre del Autor(es)"
+date: "\\today"
+lang: "es-ES"
+toc: true
+numbersections: true
+toc-depth: 4
+documentclass: article
+classoption:
+  - a4paper
+  - 11pt
+  - titlepage
+  - twoside
+geometry:
+  - top=2.5cm
+  - bottom=2.5cm
+  - left=2.5cm
+  - right=2.5cm
+header-includes: |
+  \usepackage[T1]{fontenc}
+  \usepackage{libertine}
+  \usepackage[libertine]{newtxmath}
+  \usepackage{inconsolata}
+  \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+  \addto\captionsspanish{\renewcommand{\listtablename}{Índice de tablas}}
+  \usepackage{hyperref}
+  \usepackage{pdflscape}
+  \usepackage{booktabs}
+  \usepackage{longtable, xltabular}
+  \usepackage{array}
+  \usepackage{xcolor, sectsty, fancyhdr, graphicx}
+  \definecolor{myblue}{rgb}{0.0, 0.2, 0.4}
+  \definecolor{mylight}{rgb}{0.1, 0.3, 0.6}
+  \definecolor{dkgreen}{rgb}{0,0.6,0}
+  \definecolor{gray}{rgb}{0.5,0.5,0.5}
+  \definecolor{ucmred}{rgb}{0.77, 0.07, 0.19}
+  \sectionfont{\color{myblue}}
+  \subsectionfont{\color{mylight}}
+  \subsubsectionfont{\color{gray}}
+  \pagestyle{fancy}
+  \fancyhf{}
+  \fancyhead[LE,RO]{\bfseries \color{myblue}Título Corto para Cabecera}
+  \fancyhead[LO,RE]{\bfseries \color{gray}Institución o Proyecto}
+  \fancyfoot[LE,RO]{\thepage}
+  \fancyfoot[LO,RE]{Texto de pie de página personalizado}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \hypersetup{hidelinks}
+  \usepackage{listings}
+  \lstset{basicstyle=\ttfamily\footnotesize, showstringspaces=false, keywordstyle=\color{myblue}\bfseries, commentstyle=\color{dkgreen}\itshape, stringstyle=\color{ucmred}, numbersep=5pt, frame=single, rulecolor=\color{gray!40}, tabsize=2, breaklines=true, showtabs=false, numbers=left, numberstyle=\tiny\color{gray}}
+...
